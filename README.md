@@ -3,6 +3,7 @@
 I created this bot to have a simple and easy way to get informations from a minecraft server and interact with it.
 
 ![The_Bot](https://user-images.githubusercontent.com/17253999/230373214-b249628d-2348-4ecd-95d5-58392373b308.png)
+![The_Bot_logs](https://user-images.githubusercontent.com/17253999/231829049-65bb3aea-20f8-42c2-abb9-13524260bf83.png)
 
 
 ## Key Features
