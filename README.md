@@ -4,7 +4,6 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 ![The_Bot](https://user-images.githubusercontent.com/17253999/230373214-b249628d-2348-4ecd-95d5-58392373b308.png)
 
-
 ## Key Features
 
 - Get dynamic informations about the server
@@ -21,8 +20,11 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 - Auto-restart the server if it crashes
 
+- Logs messages in a separate Discord Channel
+
 ## Requirements:
 
+- Linux based Host
 - [Python 3.8+](https://www.python.org/)
 - [A Discord Bot](https://discordpy.readthedocs.io/en/stable/discord.html)
 - [Discord.py](https://pypi.org/project/discord.py/)
@@ -30,8 +32,17 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 ## Installing
 
-[TO DO]
+### Check Requirements
+### Install Screen
+### Download the files
+### Move some of the files
+### Edit the Bot
+### Create the Linux Service for the Bot
+### Create the Linux Service for the Minecraft Server
+### Edit /etc/sudoers
 
 ## Screenshots
 
-[TO DO]
+![The_Bot_Restarting](https://user-images.githubusercontent.com/17253999/231829800-59614e03-a354-4219-9181-ff7e4ea4f858.png)
+![The_Bot_With_players](https://user-images.githubusercontent.com/17253999/231830655-c86a87dd-4ab1-4502-bf17-c197b648beaf.png)
+![The_Bot_logs](https://user-images.githubusercontent.com/17253999/231829049-65bb3aea-20f8-42c2-abb9-13524260bf83.png)
