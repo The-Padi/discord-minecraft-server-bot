@@ -20,8 +20,11 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 - Auto-restart the server if it crashes
 
+- Logs messages in a separate Discord Channel
+
 ## Requirements:
 
+- Linux based Host
 - [Python 3.8+](https://www.python.org/)
 - [A Discord Bot](https://discordpy.readthedocs.io/en/stable/discord.html)
 - [Discord.py](https://pypi.org/project/discord.py/)
@@ -29,7 +32,14 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 ## Installing
 
-[TO DO]
+### Check Requirements
+### Install Screen
+### Download the files
+### Move some of the files
+### Edit the Bot
+### Create the Linux Service for the Bot
+### Create the Linux Service for the Minecraft Server
+### Edit /etc/sudoers
 
 ## Screenshots
 
