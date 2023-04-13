@@ -41,6 +41,10 @@ I created this bot to have a simple and easy way to get informations from a mine
 ### Create the Linux Service for the Minecraft Server
 ### Edit /etc/sudoers
 
+To be able to run all the files in the Commands directory as sudo without giving any password we will be addind the scipts to our /etc/sudoers file.
+To do so, open it, as sudo, with your any editor :
+`sudo nano /etc/sudoers`
+
 ## Screenshots
 
 ![The_Bot_Restarting](https://user-images.githubusercontent.com/17253999/231829800-59614e03-a354-4219-9181-ff7e4ea4f858.png)
