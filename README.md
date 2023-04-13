@@ -37,13 +37,28 @@ I created this bot to have a simple and easy way to get informations from a mine
 ### Download the files
 ### Move some of the files
 ### Edit the Bot
-### Create the Linux Service for the Bot
-### Create the Linux Service for the Minecraft Server
 ### Edit /etc/sudoers
 
 To be able to run all the files in the Commands directory as sudo without giving any password we will be addind the scipts to our /etc/sudoers file.
 To do so, open it, as sudo, with your any editor :
-`sudo nano /etc/sudoers`
+```console
+foo@bar:~$ sudo nano /etc/sudoers
+```
+Go to this section :
+```bash
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+```
+And bellow it add the following command, making sure to change the [USERNAME] by the username of the user running the bot :
+```bash
+[USERNAME]  ALL=(ALL) NOPASSWD: /home/[USERNAME]/discord-minecraft-server-bot/Commands/service_stop.sh
+[USERNAME]  ALL=(ALL) NOPASSWD: /home/[USERNAME]/discord-minecraft-server-bot/Commands/service_start.sh
+[USERNAME]  ALL=(ALL) NOPASSWD: /home/[USERNAME]/discord-minecraft-server-bot/Commands/service_restart.sh
+```
+You can now save and close this file.
+
+### Create the Linux Service for the Bot
+### Create the Linux Service for the Minecraft Server
 
 ## Screenshots
 
