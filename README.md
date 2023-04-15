@@ -32,12 +32,19 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 ## Installing
 
-### Check Requirements
 ### Install Screen
+
+```console
+foo@bar:~$ sudo apt-get update
+foo@bar:~$ sudo apt-get install screen
+```
 ### Download the files
 ### Move some of the files
 ### Edit the Bot
-You 
+
+You can now edit the bot to your desire and configure it for your discord server.
+To do so, edit the file called ```user_settings.py```.
+
 
 ### Edit /etc/sudoers
 
