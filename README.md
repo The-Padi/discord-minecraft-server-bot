@@ -57,8 +57,47 @@ And bellow it add the following command, making sure to change the [USERNAME] by
 ```
 You can now save and close this file.
 
-### Create the Linux Service for the Bot
 ### Create the Linux Service for the Minecraft Server
+
+### Create the Linux Service for the Bot
+We will now be creating the service for the discord bot.
+```console
+foo@bar:~$ sudo nano /etc/systemd/system/discord-minecraft-bot.service
+```
+Copy paste this, making sure to change the [USERNAME] by the username of the user running the bot :
+```bash
+[Unit]
+
+Description=Discord Minecraft Bot
+After=network.target
+
+[Service]
+
+Type=simple
+RemainAfterExit=true
+
+WorkingDirectory=/home/[USERNAME]/discord-minecraft-server-bot/
+User=[USERNAME]
+
+Restart=always
+RestartSec=10
+
+ExecStart=/usr/bin/python discord_bot.py
+
+
+[Install]
+
+WantedBy=multi-user.target
+```
+Save and close this file.
+
+Enable the serivce and start it :
+```console
+foo@bar:~$ sudo nano systemctl enable discord-minecraft-bot.service
+foo@bar:~$ sudo nano systemctl start discord-minecraft-bot.service
+```
+
+If everything whent well, the bot should be online in your discord server and you should see the embedded message with all the informations about the minecraft server.
 
 ## Screenshots
 
