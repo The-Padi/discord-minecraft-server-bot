@@ -32,6 +32,8 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 ## Installing
 
+This install is based on a FTB server with all the server files in the home directory of the user.
+
 ### Install Screen
 
 ```console
@@ -39,12 +41,35 @@ foo@bar:~$ sudo apt-get update
 foo@bar:~$ sudo apt-get install screen
 ```
 ### Download the files
-### Move some of the files
+
+Login as the user that runs the minecraft server and execute those commands :
+```console
+foo@bar:~$ cd ~/
+foo@bar:~$ wget https://github.com/Padi1111/discord-minecraft-server-bot/archive/refs/heads/main.zip
+foo@bar:~$ unzip main.zip
+foo@bar:~$ rm main.zip
+foo@bar:~$ mv discord-minecraft-server-bot-main discord-minecraft-server-bot
+```
+
+### Move the start script and edit it
+
+Move the start script to the root of the minecraft server folder. In my case, this is the root home of the user.
+```console
+foo@bar:~$ mv ~/discord-minecraft-server-bot/start.sh ~/.
+```
+
+You can then edit it to make it work with your minecraft server
+```console
+foo@bar:~$ nano ~/start.sh
+```
+
 ### Edit the Bot
 
 You can now edit the bot to your desire and configure it for your discord server.
-To do so, edit the file called ```user_settings.py```.
-
+To do so, edit the file called ```user_settings.py``` in the ```discord-minecraft-server-bot``` folder.
+```console
+foo@bar:~$ nano ~/discord-minecraft-server-bot/user_settings.py
+```
 
 ### Edit /etc/sudoers
 
@@ -67,6 +92,7 @@ And bellow it add the following command, making sure to change the [USERNAME] by
 You can now save and close this file.
 
 ### Create the Linux Service for the Minecraft Server
+
 We will now be creating the service for the Minecraft Server.
 
 ```console
@@ -118,6 +144,7 @@ There is a screen on:
 ```
 
 ### Create the Linux Service for the Bot
+
 We will now be creating the service for the discord bot.
 ```console
 foo@bar:~$ sudo nano /etc/systemd/system/discord-minecraft-bot.service
