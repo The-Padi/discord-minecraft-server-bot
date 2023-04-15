@@ -37,6 +37,8 @@ I created this bot to have a simple and easy way to get informations from a mine
 ### Download the files
 ### Move some of the files
 ### Edit the Bot
+You 
+
 ### Edit /etc/sudoers
 
 To be able to run all the files in the Commands directory as sudo without giving any password we will be addind the scipts to our /etc/sudoers file.
@@ -58,6 +60,55 @@ And bellow it add the following command, making sure to change the [USERNAME] by
 You can now save and close this file.
 
 ### Create the Linux Service for the Minecraft Server
+We will now be creating the service for the Minecraft Server.
+
+```console
+foo@bar:~$ sudo nano /etc/systemd/system/minecraft-server.service
+```
+
+Copy paste this, making sure to change the [USERNAME] by the username of the user running the bot :
+```bash
+[Unit]
+
+Description=Minecraft Server
+After=network.target
+
+[Service]
+
+Type=simple
+RemainAfterExit=true
+
+WorkingDirectory=/home/[USERNAME]
+User=[USERNAME]
+
+Restart=on-failure
+
+ExecStart=/usr/bin/screen -dmS mc-server bash start.sh
+
+ExecStop=bash discord-minecraft-server-bot/stop.sh
+
+[Install]
+
+WantedBy=multi-user.target
+```
+Save and close this file.
+
+Enable the serivce and start it :
+```console
+foo@bar:~$ sudo nano systemctl enable minecraft-server.service
+foo@bar:~$ sudo nano systemctl start minecraft-server.service
+```
+
+If everything whent well, your minecraaft server should now start. To check, login as the user that runs the server and execute this command :
+```console
+foo@bar:~$ screen -ls
+```
+You should see something like this :
+```console
+There is a screen on:
+        2590603.mc-server       (15. 04. 23 16:00:18)   (Detached)
+1 Socket in /run/screen/S-mcserver.
+```
 
 ### Create the Linux Service for the Bot
 We will now be creating the service for the discord bot.
