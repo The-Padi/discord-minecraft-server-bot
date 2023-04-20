@@ -22,6 +22,13 @@ I created this bot to have a simple and easy way to get informations from a mine
 
 - Logs messages in a separate Discord Channel
 
+## Futur Key Features
+
+- Player Play time
+- Send command via Discord
+- Player Count as status
+- If there is a features that you would like to see, tell me about it !
+
 ## Requirements:
 
 - Linux based Host
