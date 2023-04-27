@@ -135,8 +135,8 @@ Save and close this file.
 
 Enable the serivce and start it :
 ```console
-foo@bar:~$ sudo nano systemctl enable minecraft-server.service
-foo@bar:~$ sudo nano systemctl start minecraft-server.service
+foo@bar:~$ sudo systemctl enable minecraft-server.service
+foo@bar:~$ sudo systemctl start minecraft-server.service
 ```
 
 If everything whent well, your minecraaft server should now start. To check, login as the user that runs the server and execute this command :
