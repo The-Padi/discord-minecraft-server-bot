@@ -330,9 +330,11 @@ async def on_ready():
 	channel = client.get_channel(channel_minecraft)
 	
 	#Check if the last message on the channel is from the Bot to avoid a delete + a resend (SPAM)
-	last_message = (await channel.history(limit=1).flatten())[-1]
+	last_message = None
+	async for message in channel.history(limit=1):
+		last_message = message
 	
-	if last_message.author == client.user:
+	if last_message is not None and last_message.author == client.user:
 		
 		#Use the last message as our new message
 		msg_id = last_message.id
