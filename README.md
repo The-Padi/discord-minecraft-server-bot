@@ -185,8 +185,8 @@ Save and close this file.
 
 Enable the serivce and start it :
 ```console
-foo@bar:~$ sudo nano systemctl enable discord-minecraft-bot.service
-foo@bar:~$ sudo nano systemctl start discord-minecraft-bot.service
+foo@bar:~$ sudo systemctl enable discord-minecraft-bot.service
+foo@bar:~$ sudo systemctl start discord-minecraft-bot.service
 ```
 
 If everything whent well, the bot should be online in your discord server and you should see the embedded message with all the informations about the minecraft server.
